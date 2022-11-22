@@ -19,4 +19,35 @@ let pessoa = {
     }
 }
 
-//
+// Segunda Tarefa  - Elevador criada para retornar a "Entrada e Saída" das pessoas e "Subir e Descer" os andares
+
+let elevador = {
+    andarAtual: 0,
+    totalDeAndares: 7,
+    capacidadeDoElevador: 5,
+    ocupacaoAtual: 0,
+
+    entrar: function () {
+        for (i = 0; i < this.capacidadeDoElevador; i++) {
+            this.ocupacaoAtual++
+            if (this.ocupacaoAtual >= this.capacidadeDoElevador) {
+                return (`Elevador Lotado`)
+            } else {
+                return (`Ocupação atual em: ${this.ocupacaoAtual}`)
+            }
+        }
+    },
+
+    sair: function () {
+        for (i = 0; i < this.ocupacaoAtual; i--) {
+            this.ocupacaoAtual--
+            return (`Ocupação atual em: ${this.ocupacaoAtual}`)
+        }
+    }
+
+
+
+
+
+
+}
