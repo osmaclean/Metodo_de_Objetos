@@ -42,12 +42,35 @@ let elevador = {
         for (i = 0; i < this.ocupacaoAtual; i--) {
             this.ocupacaoAtual--
             return (`Ocupação atual em: ${this.ocupacaoAtual}`)
+        } if (this.ocupacaoAtual <= 0) {
+            return (`Esse elevador se encontra vazio`)
+        }
+    },
+
+
+    subir: function () {
+        for (i = 0; i < this.totalDeAndares; i++) {
+            this.andarAtual++
+            if (this.andarAtual >= this.totalDeAndares) {
+                return (`O elevador já se encontra no último andar`)
+            } else {
+                return (`Estamos no andar: ${this.andarAtual}`)
+            }
+        }
+    },
+
+    descer: function () {
+        for (i = 0; i < this.totalDeAndares; i--) {
+            this.andarAtual--
+            if (this.andarAtual <= 0) {
+                return (`O elevador já se encontra no térreo`)
+            } else {
+                return (`Estamos no andar: ${this.andarAtual}`)
+            }
         }
     }
 
-
-
-
-
-
 }
+
+
+//
