@@ -19,7 +19,7 @@ let pessoa = {
     }
 }
 
-// Segunda Tarefa  - Elevador criada para retornar a "Entrada e Saída" das pessoas e "Subir e Descer" os andares
+// Segunda Tarefa  - Elevador - criada para retornar a "Entrada e Saída" das pessoas e "Subir e Descer" os andares
 
 let elevador = {
     andarAtual: 0,
@@ -73,4 +73,38 @@ let elevador = {
 }
 
 
-//
+// Terceira Tarefa  - Televisão - criada para retornar a "Volume: Máx e Min" da TV e "Canal: Trocar"
+
+let televisao = {
+    canalAtual: 0,
+    volume: 0,
+
+    aumentarVolume: function () {
+        for (i = 0; i < 10; i++) {
+            this.volume++
+            if (this.volume >= 10) {
+                return (`Volume no máximo`)
+            } else {
+                return (`Volume está em: ${this.volume}`)
+            }
+        }
+    },
+
+    diminuirVolume: function () {
+        for (i = 0; i < this.volume; i--) {
+            this.volume--
+            if (this.volume <= 0) {
+                return (`Volume no mínimo`)
+            } else {
+                return (`Volume está em: ${this.volume}`)
+            }
+        }
+    }
+
+
+
+
+
+
+
+}
