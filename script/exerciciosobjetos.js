@@ -130,6 +130,8 @@ let televisao = {
     consultarVolume: function () {
         return (`O volume está em: ${this.volume}`)
     }
-
-
 }
+
+alert(`Page made by: Lucas Maclean.`);
+alert(`Página de aprendizado e execução de Métodos de Objetos`);
+alert(`Tudo dentro do "Console"`);
