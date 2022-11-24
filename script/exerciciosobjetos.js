@@ -99,12 +99,37 @@ let televisao = {
                 return (`Volume está em: ${this.volume}`)
             }
         }
+    },
+
+    mudarCanalParaCima: function () {
+        for (i = 0; i < 10; i++) {
+            this.canalAtual++
+            if (this.canalAtual >= 10) {
+                return (`Este já é o último canal.`)
+            } else {
+                return (`O canal atual é: ${this.canalAtual}`)
+            }
+        }
+    },
+
+    mudarCanalParaBaixo: function () {
+        for (i = 0; i < this.canalAtual; i--) {
+            this.canalAtual--
+            if (this.canalAtual <= 0) {
+                return (`Este é o primeiro canal`)
+            } else {
+                return (`O canal atual é: ${this.canalAtual}`)
+            }
+        }
+    },
+
+    consultarCanal: function () {
+        return (`O canal que você está assistindo é o ${this.canalAtual}`)
+    },
+
+    consultarVolume: function () {
+        return (`O volume está em: ${this.volume}`)
     }
-
-
-
-
-
 
 
 }
